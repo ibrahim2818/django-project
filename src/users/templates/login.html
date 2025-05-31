@@ -1,0 +1,18 @@
+{% extends "base/base.html"%}
+{% load static %}
+
+{% block content %}
+    <div style="text-align: center;">
+        <main class="form-signin">
+            <form action="" method="post">
+                <img src="{% static 'logo.png' %}" width="72" height=auto alt="AutoMax logo">
+                {{login_form}}
+                <button type="submit">Sign In</button>
+            </form>
+        </main>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
