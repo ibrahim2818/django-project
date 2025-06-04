@@ -9,7 +9,7 @@
             <div style="text-align: center; margin-top: 20px;">
                 <img src="{% static 'logo.png' %}" width="100" height="auto" alt="AutoMax logo">
             </div>
-            
+            {% csrf_token %}
             {{login_form|crispy}}
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn btn-warning" type="submit">Sign In</button>
