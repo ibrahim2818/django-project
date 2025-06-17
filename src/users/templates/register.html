@@ -1,0 +1,32 @@
+{% extends "base/base.html"%}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+   <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;">
+
+    <main class="form-signin" style="width: 350px;">
+        <form action="" method="post">
+            <div style="text-align: center; margin-top: 50px;">
+                <img src="{% static 'logo.png' %}" width="100" height="auto" alt="AutoMax logo">
+            </div>
+            {% csrf_token %}
+            {{register_form|crispy}}
+            <div style="text-align: center; margin-top: 20px; margin-bottom: 50px;">
+                <button class="btn btn-warning" type="submit">Register</button>
+            </div>
+
+        </form>
+    </main>
+</div>
+
+
+{% endblock %}
+{% block footer %}
+  <footer class="text-center text-white mt-auto" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="container p-3">
+      <p>© {% now "Y" %} AUTOMAX. All rights reserved.</p>
+    </div>
+  </footer>
+{% endblock %}
+

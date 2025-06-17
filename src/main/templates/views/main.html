@@ -1,5 +1,38 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% block style %}
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #bgvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;  /* change this to 'contain' if you want the full video without cropping */
+    z-index: -1;
+  }
+
+  .index {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+  }
+</style>
+{% endblock style %}
 
 {% block content %}
 <div>
