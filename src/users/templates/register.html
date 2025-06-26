@@ -3,6 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+{% block navbar %}
+{% endblock navbar %}
    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;">
 
     <main class="form-signin" style="width: 350px;">
@@ -21,12 +23,12 @@
 </div>
 
 {% block footer %}
-  <footer class="text-center text-white mt-auto" style="background-color: rgba(0, 0, 0, 0.6);">
+{% endblock footer %}
+<footer class="text-center text-white mt-auto" style="background-color: rgba(0, 0, 0, 0.6);">
     <div class="container p-3">
       <p>© {% now "Y" %} AUTOMAX. All rights reserved.</p>
     </div>
   </footer>
-{% endblock %}
-{% endblock %}
+{% endblock content %}
 
 
